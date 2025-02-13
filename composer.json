@@ -1,0 +1,54 @@
+{
+    "name": "cst/ppob-laravel",
+    "description": "Helper for ppob transaction to cipta server",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4",
+        "orchestra/testbench": "^6.2"
+    },
+    "license": "CC-BY-4.0",
+    "autoload": {
+        "psr-4": {
+            "Cst\\PpobLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
+    },
+    "authors": [
+        {
+            "name": "devlagret",
+            "email": "sioputra4@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "scripts": {
+        "post-autoload-dump": [
+            "@prepare"
+        ],
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve --ansi"
+        ],
+        "test": [
+            "@php vendor/bin/phpunit"
+        ]
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "Cst\\PpobLaravel\\PPOBServiceProvider"
+        ]
+    }
+    }
+}

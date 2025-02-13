@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    backupGlobals="false" backupStaticAttributes="false"
+    colors="true" convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    processIsolation="false" stopOnFailure="false"
+>
+    <php>
+        <env name="APP_KEY" value="base64:Y2lwdGFzb2x1dGluZG90ZWNodGVhbTppZ25hdGl1cyxkYXZhLHNheXlpZCxhcmth"/>
+    </php>
+    <testsuites>
+        <testsuite name="PPOB Test">
+            <directory suffix=".php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

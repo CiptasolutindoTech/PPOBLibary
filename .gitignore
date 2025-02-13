@@ -1,0 +1,4 @@
+/vendor/
+/workbench/
+.env
+.phpunit.result.cache
