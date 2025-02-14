@@ -1,5 +1,5 @@
 <?php
-namespace Cst\PPOB;
+namespace Cst\PPOBLib;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Http;

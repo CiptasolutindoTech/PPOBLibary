@@ -1,7 +1,7 @@
 <?php
-namespace Cst\PPOB;
+namespace Cst\PPOBLib;
 
-use Cst\PPOB\PPOBBase;
+use Cst\PPOBLib\PPOBBase;
 use Illuminate\Support\Str;
 
 class Pulsa extends PPOBBase
