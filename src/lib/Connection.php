@@ -19,17 +19,17 @@ class Connection
     }
     protected function appToken()
     {
-        if (empty(config('app.ppob_api_key', env('PPOB_API_KEY')))) {
+        if (empty(config('ppob.ppob_api_key', env('PPOB_API_KEY')))) {
             throw new \Exception('PPOB Api key required');
         }
-        return config('app.ppob_api_key', env('PPOB_API_KEY'));
+        return config('ppob.ppob_api_key', env('PPOB_API_KEY'));
     }
     protected function secretKey()
     {
-        if (empty(config('app.ppob_secret_key', env('PPOB_SECRET_KEY')))) {
+        if (empty(config('ppob.ppob_secret_key', env('PPOB_SECRET_KEY')))) {
             throw new \Exception('PPOB secret key required');
         }
-        return config('app.ppob_secret_key', env('PPOB_SECRET_KEY'));
+        return config('ppob.ppob_secret_key', env('PPOB_SECRET_KEY'));
     }
     protected function APIKey()
     {
